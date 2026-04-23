@@ -1,0 +1,39 @@
+{
+    "All-OS": {
+        "required-download": {
+            "php": "",
+        }
+
+    },
+
+    "Windows-OS": {
+        "Windows-10": {
+            "WSL": {},
+
+            "Pure-windows": {}
+
+        },
+
+        "Windows-11": {
+            "WSL": {},
+
+            "Pure-windows": {}
+        },
+
+
+    },
+
+    "MacOS": {},
+
+    "Linux-OS": {
+        "Debian": {
+
+        },
+
+        "Arch": {},
+
+        "Red-hat": {}
+
+    }
+
+}
