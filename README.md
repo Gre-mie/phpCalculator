@@ -7,6 +7,7 @@ This is a throw away project to get comfortable with Laravel
 - `print:bakery` command
 - `check:version` command
 
+<<<<<<< HEAD
 
 ## Commands
 
@@ -26,17 +27,6 @@ Prints a bakery to the terminal. The ingredients list is split into groups of 5,
 Checks the development environment versions meet the projects required versions set in  `projectRequirements.json`
 
 
-<<<<<<< Updated upstream
-`print:bakery <name> <[ingredients]>` in project root will split the ingredients array into groups of 5 and attempt to bake cakes.
-Successful cake baking will result in a cake emoji, unsuccessful baking will result in the poop emoji.
-=======
->>>>>>> Stashed changes
-
-
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
 
 ## License
 
