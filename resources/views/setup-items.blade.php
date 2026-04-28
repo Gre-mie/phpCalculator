@@ -5,16 +5,19 @@
         <meta name="viewport" content="width=device-width,initial-scale=1">
     </head>
     <body>
+        <a href="/till-basket">test basket</a>
+
         <h1>{{$name}}</h1>
         <p>What items will your bakery sell?</p>
         <form
-            action="/tillPurchases"
+            name="till-setup-items"
+            action="/till-basket"
             method="POST"
         >
             @csrf
 
 
-        <input type="submit" value="Done">
+            <input type="submit" value="Done">
             <div id="products-container">
                 <div>
                     <img
@@ -49,7 +52,7 @@
                     <input type="checkbox" id="muffin" name="muffin" value="3.50">
                 </div>
                 <div>
-                     <img
+                    <img
                         src="./resources/images/scone.png"
                         alt="A hard crumbly brick with cream and jam."
                     >
@@ -64,7 +67,6 @@
                     <lable for="bakewell-tart">Bakewell tart<span class="price">£2.00</span></lable>
                     <input type="checkbox" id="bakewell-tart" name="bakewell-tart" value="2.00">
                 </div>
-
             </div>
         </form>
     </body>
