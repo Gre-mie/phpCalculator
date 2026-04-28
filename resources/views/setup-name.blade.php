@@ -10,7 +10,7 @@
         <p>What is the name of your bakery?<p>
         <form
             name="till-setup-name"
-            method="post"
+            method="POST"
             action="/setup-items"
         >
             @csrf
@@ -19,12 +19,14 @@
             <input
                 type="text"
                 id="input-bakery-name"
+                name="name"
                 required
                 minlength="5"
                 maxlength="30"
-                name="bakery-name"
             >
             <input type="submit" value="->">
+
+            <a href="/setup-items">test page: setup-items</a>
         </form>
     </body>
 </html>
