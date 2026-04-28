@@ -25,8 +25,6 @@
                 maxlength="30"
             >
             <input type="submit" value="->">
-
-            <a href="/setup-items">test page: setup-items</a>
         </form>
     </body>
 </html>
