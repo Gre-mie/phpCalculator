@@ -18,7 +18,7 @@
 
 
             <input type="submit" value="Done">
-            <div id="products-container">
+            <div class="products-container">
                 <div>
                     <img
                         src="./resources/images/croissant.png"

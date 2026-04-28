@@ -20,6 +20,7 @@ Route::get('/till-basket', function () {
     return view('till-basket');
 });
 Route::post('/till-basket', function (Request $req) {
+    $name = $req->old('name');
     $croissant = $req->input('croissant');
     $victoriaSponge = $req->input('victoria-sponge');
     $bread = $req->input('bread');
@@ -28,6 +29,7 @@ Route::post('/till-basket', function (Request $req) {
     $bakewellTart = $req->input('bakewell-tart');
 
     return view('till-basket', [
+        'name'=>$name,
         'croissant'=>$croissant,
         'victoriaSponge'=>$victoriaSponge,
         'bread'=>$bread, 'muffin'=>$muffin,
