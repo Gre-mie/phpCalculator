@@ -1,4 +1,4 @@
-<x-boilerplate>
+<x-boilerplate title="till basket">
     <h1>bakery name ==> </h1>
     <div id="backet-container">
         <h2>Basket:</h2>

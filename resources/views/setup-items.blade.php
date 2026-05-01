@@ -1,9 +1,56 @@
+<x-boilerplate title="setup items">
 
-<x-boilerplate>
-    <a href="/till-basket">test basket</a>
+    @php
+        $items = [
+            [
+                'id' => 'croissant',
+                'name' => 'Croissant',
+                'price' => '1.50',
+                'imagePath' => './resources/images/croissant.png',
+                'description' => 'A horse shoe shapped pastery.'
+            ],
+            [
+                'id' => 'victoria-sponge',
+                'name' => 'Victoria Sponge',
+                'price' => '4.00',
+                'imagePath' => './resources/images/victoriaSponge.png',
+                'description' => 'A soft vanila cake with cream and jam.'
+            ],
+            [
+                'id' => 'bread',
+                'name' => 'Bread',
+                'price' => '3.50',
+                'imagePath' => './resources/images/bread.png',
+                'description' => 'A soft bread.'
+            ],
+            [
+                'id' => 'muffin',
+                'name' => 'Muffin',
+                'price' => '3.50',
+                'imagePath' => './resources/images/muffin.png',
+                'description' => 'An individual fluffy cake.'
+            ],
+            [
+                'id' => 'scone',
+                'name' => 'Scone',
+                'price' => '1.00',
+                'imagePath' => './resources/images/scone.png',
+                'description' => 'A hard crumbly brick with cream and jam.'
+            ],
+            [
+                'id' => 'bakewell-tart',
+                'name' => 'Bakewell tart',
+                'price' => '2.00',
+                'imagePath' => './resources/images/bakewellTart.png',
+                'description' => 'A tart with almond and jam topped with iceing and a cherry.'
+            ],
+        ];
+    @endphp
+
 
     <h1>{{$name}}</h1>
     <p>What items will your bakery sell?</p>
+
     <form
         name="till-setup-items"
         action="/till-basket"
@@ -11,57 +58,19 @@
     >
         @csrf
 
-
         <input type="submit" value="Done">
-        <div class="products-container">
-            <div>
-                <img
-                    src="./resources/images/croissant.png"
-                    alt="A horse shoe shapped pastery."
-                >
-                <lable for="croissant">Croissant<span class="price">£1.50</span></lable>
-                <input type="checkbox" id="croissant" name="croissant" value="1.50">
-            </div>
-            <div>
-                <img
-                    src="./resources/images/victoriaSponge.png"
-                    alt="A soft vanila cake with cream and jam."
-                >
-                <lable for="victoria-sponge">Victoria Sponge<span class="price">£4.00</span></lable>
-                <input type="checkbox" id="victoria-sponge" name="victoria-sponge" value="4.00">
-            </div>
-            <div>
-                <img
-                    src="./resources/images/bread.png"
-                    alt="A soft bread."
-                >
-                <lable for="bread">Bread<span class="price">£3.50</span></lable>
-                <input type="checkbox" id="bread" name="bread" value="3.50">
-            </div>
-            <div>
-                <img
-                    src="./resources/images/muffin.png"
-                    alt="An individual fluffy cake."
-                >
-                <lable for="muffin">Muffin<span class="price">£3.50</span></lable>
-                <input type="checkbox" id="muffin" name="muffin" value="3.50">
-            </div>
-            <div>
-                <img
-                    src="./resources/images/scone.png"
-                    alt="A hard crumbly brick with cream and jam."
-                >
-                <lable for="scone">Scone<span class="price">£1.00</span></lable>
-                <input type="checkbox" id="scone" name="scone" value="1.00">
-            </div>
-            <div>
-                <img
-                    src="./resources/images/bakewellTart.png"
-                    alt="A tart with almond and jam topped with iceing and a cherry."
-                >
-                <lable for="bakewell-tart">Bakewell tart<span class="price">£2.00</span></lable>
-                <input type="checkbox" id="bakewell-tart" name="bakewell-tart" value="2.00">
-            </div>
+        <div class="item-container">
+
+            @foreach ($items as $row)
+                <x-item-image-checkbox
+                    :id="$row['id']"
+                    :name="$row['name']"
+                    :price="$row['price']"
+                    :imagePath="$row['imagePath']"
+                    :description="$row['description']"
+                ></x-item-image-checkbox>
+            @endforeach
+
         </div>
     </form>
 </x-boilerplate>

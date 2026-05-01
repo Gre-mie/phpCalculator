@@ -1,4 +1,4 @@
-<x-boilerplate>
+<x-boilerplate title="setup name">
     <h1>Till Setup</h1>
     <p>What is the name of your bakery?<p>
     <form
