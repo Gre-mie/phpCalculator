@@ -1,6 +1,6 @@
 <x-boilerplate title="setup name">
     <h1>Till Setup</h1>
-    <p>What is the name of your bakery?<p>
+    <p>What is the name of your bakery?</p>
     <form
         name="till-setup-name"
         method="POST"
@@ -10,6 +10,8 @@
 
         <label for="input-bakery-name">Name: </label>
         <input
+            class="text-field"
+
             type="text"
             id="input-bakery-name"
             name="name"
@@ -17,6 +19,13 @@
             minlength="5"
             maxlength="30"
         >
-        <input type="submit" value="->">
+
+<input
+    class="button"
+    type="submit"
+    value="->"
+
+    class="button"
+>
     </form>
 </x-boilerplate>
